@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+        />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Document</title>
+        <style>
+            /** Gới ý màu
+                + tiêu đề: #388e3c
+                + Viền bảng: #b00c2d
+                + Dòng header: #5f52ab
+                + Lunch và lab: #ffefb3
+                + Empty: #e0e0e0
+         */
+
+            body {
+                font-size: 62.5%;
+            }
+
+            h3 {
+                font-size: 1.8rem;
+                text-transform: uppercase;
+                text-align: center;
+                color: #388e3c;
+            }
+
+            table {
+                width: 950px;
+                margin: 0 auto;
+                border: 4px dashed #b00c2d;
+                border-collapse: collapse;
+                font-size: 1.6rem;
+            }
+
+            tbody {
+                border: 1px solid #b00c2d;
+            }
+
+            /* Header not lunch */
+            tr:nth-child(1) {
+                background: #5f52ab;
+                color: #fff;
+            }
+
+            tr:nth-child(1):hover {
+                background: #4b3aaa;
+                color: #fff;
+            }
+
+            /* Header */
+            tr:nth-child(1) {
+                text-transform: uppercase;
+                font-weight: 700;
+            }
+
+            /* Day */
+            td:nth-child(1) {
+                font-weight: 700;
+                transition: all 0.5s;
+            }
+
+            tr:not(:nth-child(1)) td:nth-child(1):hover {
+                background: purple;
+                color: #fff;
+            }
+            
+            /* Lunch and Lab bg */
+            tr:nth-child(1) td:nth-child(4),
+            tr:nth-child(3) td:nth-child(2),
+            tr:nth-child(6) td:nth-child(2),
+            tr:nth-child(7) td:nth-child(4) {
+                background: #ffefb3;
+                color: #000;
+            }
+
+            tr:nth-child(1) td:nth-child(4):hover,
+            tr:nth-child(3) td:nth-child(2):hover,
+            tr:nth-child(6) td:nth-child(2):hover,
+            tr:nth-child(7) td:nth-child(4):hover {
+                background: #f5db7d;
+            }
+
+            /* Empty bg */
+            tr:nth-child(2) td:nth-child(4),
+            tr:nth-child(8) td:nth-child(2),
+            tr:nth-child(8) td:nth-child(3) {
+                background: #e0e0e0;
+            }
+
+            tr:nth-child(2) td:nth-child(4):hover,
+            tr:nth-child(8) td:nth-child(2):hover,
+            tr:nth-child(8) td:nth-child(3):hover {
+                background: #999898;
+            }
+
+            td {
+                padding: 20px 5px;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>student schedule</h3>
+        <table border="1">
+            <tbody>
+                <tr>
+                    <td>Day/Period</td>
+                    <td>I</td>
+                    <td>II</td>
+                    <td rowspan="8">lunch</td>
+                    <td>III</td>
+                    <td>IV</td>
+                </tr>
+                <tr>
+                    <td>Monday</td>
+                    <td>Math</td>
+                    <td>Physics</td>
+                    <td colspan="2" rowspan="2"></td>
+                </tr>
+                <tr>
+                    <td>Tuesday</td>
+                    <td colspan="2">LAB</td>
+                </tr>
+                <tr>
+                    <td>Wednesday</td>
+                    <td>History</td>
+                    <td>Music</td>
+                    <td colspan="2">SEMINAR</td>
+                </tr>
+                <tr>
+                    <td>Thursday</td>
+                    <td>Physical Education</td>
+                    <td>Swimming</td>
+                    <td>Chemistry</td>
+                    <td>Biology</td>
+                </tr>
+                <tr>
+                    <td>Friday</td>
+                    <td colspan="2">LAB</td>
+                    <td>Geography</td>
+                    <td>Informatics</td>
+                </tr>
+                <tr>
+                    <td>Saturday</td>
+                    <td>Math</td>
+                    <td>Physics</td>
+                    <td colspan="2">LAB</td>
+                </tr>
+                <tr>
+                    <td>Sunday</td>
+                    <td colspan="2"></td>
+                    <td></td>
+                    <td>Homework</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
