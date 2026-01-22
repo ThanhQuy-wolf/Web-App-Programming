@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center; 
+            align-items: center;
+            height: 100vh;
+            width: 100vw;
+        }
+
+        .login {
+            width: 30%;
+            padding: 8px;
+            border: 1px solid #948b8b;
+        }
+
+        .form {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            width: 100%;
+        }
+
+        .form__label {
+            display: inline-block;
+            width: 100px;
+        }
+
+        .form__btn {
+            margin-left: 105px;
+            width: 60px;
+            height: 25px;
+        }
+
+        .login__link {
+            text-decoration: none;
+        }
+
+        .form__sub-content {
+            margin-left: 105px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="login">
+        <form action="https://web-503073.herokuapp.com/lab01/login.php" class="form" method="post">
+            <div class="form__box">
+                <label for="email" class="form__label">Email</label>
+                <input 
+                type="email" 
+                name="email" 
+                id="email" 
+                class="form__text" 
+                placeholder="email@domain.com"
+                required>
+            </div>
+
+            <div class="form__box">
+                <label for="password" class="form__label">Password</label>
+                <input 
+                type="password" 
+                name="password" 
+                id="password" 
+                class="form__text" 
+                placeholder="password"
+                required
+                minlength="6">
+            </div>
+
+            <div class="form__box">
+                <label for="checkbox" class="form__label">Remember me</label>
+                <input 
+                type="checkbox" 
+                name="checkbox" 
+                id="checkbox" 
+                class="form__text" 
+                placeholder="">
+            </div>
+
+            <button type="submit" class="form__btn">Login</button>
+        </form>
+
+        <div class="form__sub-content">
+            <span class="login__text">Not registered?</span>
+            <a href="#!" class="login__link">Create an account</a>
+        </div>
+
+        <div class="form__sub-content">
+            <span class="login__text">Forgot your password?</span>
+            <a href="#!" class="login__link">Click here to reset</a>
+        </div>
+    </div>
+</body>
+</html>

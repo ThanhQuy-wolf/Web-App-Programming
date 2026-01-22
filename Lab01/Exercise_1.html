@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <style>
+        .table {
+            width: 70%;
+            margin: 0 auto;
+
+            border: 1px solid rgb(187, 184, 184);
+            padding: 10px;
+        }
+
+        .table__title {
+            margin-top: 0;
+            margin-bottom: 20px;
+            text-align: center;
+            font-size: 24px;
+            color: rgb(85, 67, 196);
+        }
+        
+        .table__content {
+            width: 100%;
+            border: 1px solid #525151;
+            padding: 1px;
+        }
+
+        .table__column {
+            min-width: 100%;
+            border: 1px solid #000;
+            padding: 5px 10px; 
+
+            text-align: center;
+            font-weight: 500;
+        }
+
+        .table__day {
+            color: rgb(85, 67, 196);
+        }
+
+        .table__lab {
+            background-color: rgb(255, 230, 138);
+        }
+
+        .table__empty {
+            background-color: rgb(210, 210, 210);
+        }
+
+        .table__day, .table__heading, .table__lunch {
+            font-weight: bold;
+        }
+
+        .table__lunch {
+            background: rgb(156, 247, 129);
+        }
+    </style>
+</head>
+<body>
+    <div class="table">
+        <h1 class="table__title">STUDENT SCHEDULE</h1>
+        <table class="table__content">
+            <tr class="table__row">
+                <td class="table__column table__day">DAY/PERIOD</td>
+                <td class="table__column table__heading">I</td>
+                <td class="table__column table__heading">II</td>
+                <td class="table__column table__lunch" rowspan="8">LUNCH</td>
+                <td class="table__column table__heading">III</td>
+                <td class="table__column table__heading">IV</td>
+            </tr>
+            <tr class="table__row">
+                <td class="table__column table__day">MONDAY</td>
+                <td class="table__column">Math</td>
+                <td class="table__column">Physics</td>
+                <td class="table__column table__empty" rowspan="2" colspan="2"></td>
+            </tr>
+            <tr class="table__row">
+                <td class="table__column table__day">TUESDAY</td>
+                <td class="table__column table__lab" colspan="2">LAB</td>
+            </tr>
+            <tr class="table__row">
+                <td class="table__column table__day">WEDNESDAY</td>
+                <td class="table__column">History</td>
+                <td class="table__column">Music</td>
+                <td class="table__column" colspan="2">SEMINAR</td>
+            </tr>
+            <tr class="table__row">
+                <td class="table__column table__day">THURSDAY</td>
+                <td class="table__column">Physical Education</td>
+                <td class="table__column">Swimming</td>
+                <td class="table__column">Chesmitry</td>
+                <td class="table__column">Biology</td>
+            </tr>
+            <tr class="table__row">
+                <td class="table__column table__day">FRIDAY</td>
+                <td class="table__column table__lab" colspan="2">LAB</td>
+                <td class="table__column">Geography</td>
+                <td class="table__column">Informatics</td>
+            </tr>
+            <tr class="table__row">
+                <td class="table__column table__day">SATURDAY</td>
+                <td class="table__column">Math</td>
+                <td class="table__column">Physics</td>
+                <td class="table__column table__lab" colspan="2">LAB</td>
+            </tr>
+            <tr class="table__row">
+                <td class="table__column table__day">SUNDAY</td>
+                <td class="table__column table__empty" colspan="2"></td>
+                <td class="table__column table__empty"></td>
+                <td class="table__column">Homework</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

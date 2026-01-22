@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Register</title>
+        <style>
+            .register {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+            }
+
+            .register__form {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+                width: 300px;
+                border: 1px solid #555;
+                padding: 10px;
+            }
+
+            .form__label {
+                display: inline-block;
+                width: 35%;
+            }
+
+            .form__input {
+                width: calc(100% - 35% - 20px);
+            }
+
+            .form__box-gender {
+                display: flex;
+            }
+
+            .form__box-gender .form__box--inner:first-of-type {
+                margin-right: 20px;
+            }
+
+            .form__box--inner {
+                display: flex;
+                gap: 5px;
+            }
+
+            .form__gender {
+                padding-top: 5px;
+            }
+
+            .form__select {
+                width: calc(100% - 35% - 20px);
+                height: 25px;
+            }
+
+            .form__box-favorite {
+                display: flex;
+            }
+
+            .form__box-textarea {
+                display: flex;
+                justify-content: flex-start;
+            }
+
+            .form__textarea {
+                width: calc(100% - 35% - 20px);
+                height: 100px;
+            }
+
+            .form__btn-box {
+                margin-top: 5px;
+                margin-left: calc(100% - 65%);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="register">
+            <form
+                action="https://web-503073.herokuapp.com/lab01/register.php"
+                class="register__form"
+                method="post"
+            >
+                <div class="form__box">
+                    <label for="name" class="form__label">Your Name</label>
+                    <input
+                        type="text"
+                        name="name"
+                        id="name"
+                        class="form__input"
+                        placeholder="Full Name"
+                        required
+                    />
+                </div>
+
+                <div class="form__box">
+                    <label for="email" class="form__label">Email Address</label>
+                    <input
+                        type="email"
+                        name="email"
+                        id="email"
+                        class="form__input"
+                        required
+                        placeholder="Email"
+                    />
+                </div>
+
+                <div class="form__box">
+                    <label for="date" class="form__label">Birthday</label>
+                    <input type="date" name="date" id="date" class="form__input" required />
+                </div>
+
+                <div class="form__box">
+                    <label for="birth-time" class="form__label">Birthtime</label>
+                    <input
+                        type="time"
+                        name="birth-time"
+                        id="birth-time"
+                        class="form__input"
+                        required
+                    />
+                </div>
+
+                <div class="form__box form__box-gender">
+                    <label for="male" class="form__label">Gender</label>
+                    <div class="form__box--inner">
+                        <input type="radio" name="gender" id="male" class="form__input" required />
+                        <label for="male" class="form__gender">Male</label>
+                    </div>
+                    <div class="form__box--inner">
+                        <input
+                            type="radio"
+                            name="gender"
+                            id="female"
+                            class="form__input"
+                            required
+                        />
+                        <label for="female" class="form__gender">Female</label>
+                    </div>
+                </div>
+
+                <div class="form__box">
+                    <label for="country" class="form__label">From</label>
+                    <select name="country" id="country" class="form__select">
+                        <option value="" selected disabled>Select a country</option>
+
+                        <optgroup label="Asia">
+                            <option value="Vietnam">Vietnam</option>
+                            <option value="Laos">Laos</option>
+                            <option value="Cambodia">Cambodia</option>
+                            <option value="Singapore">Singapore</option>
+                        </optgroup>
+
+                        <optgroup label="Europe">
+                            <option value="France">France</option>
+                            <option value="Belgium">Belgium</option>
+                            <option value="Italy">Italy</option>
+                            <option value="Finland">Finland</option>
+                            <option value="Ireland">Ireland</option>
+                        </optgroup>
+                    </select>
+                </div>
+
+                <div class="form__box form__box-favorite">
+                    <label for="favorite" class="form__label">Favorite IDE</label>
+                    <div class="form__left-side">
+                        <div class="form__box--inner">
+                            <input type="checkbox" name="vsc" id="vsc" class="form__input-checkbox" />
+                            <label for="vsc" class="form__fav">Visual Studio Code</label>
+                        </div>
+    
+                        <div class="form__box--inner">
+                            <input type="checkbox" name="st" id="st" class="form__input-checkbox" />
+                            <label for="st" class="form__fav">Sublime Text</label>
+                        </div>
+    
+                        <div class="form__box--inner">
+                            <input type="checkbox" name="ec" id="ec" class="form__input-checkbox" />
+                            <label for="ec" class="form__fav">Eclipse</label>
+                        </div>
+    
+                        <div class="form__box--inner">
+                            <input type="checkbox" name="at" id="at" class="form__input-checkbox" />
+                            <label for="at" class="form__fav">Atom</label>
+                        </div>
+    
+                        <div class="form__box--inner">
+                            <input type="checkbox" name="ii" id="ii" class="form__input-checkbox" />
+                            <label for="ii" class="form__fav">Intelij Idea</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form__box">
+                    <label for="score" class="form__label">TOEIC Score</label>
+                    <input type="range" name="score" id="score" class="form__input" required min="5" max="990"/>
+                </div>
+
+                <div class="form__box form__box-textarea">
+                    <label for="message" class="form__label">Message</label>
+                    <textarea name="message" id="message" class="form__textarea"></textarea>
+                </div>
+
+                <div class="form__btn-box">
+                    <button type="submit" class="form__btn">Register</button>
+                    <button type="reset" class="form__btn">Again</button>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
