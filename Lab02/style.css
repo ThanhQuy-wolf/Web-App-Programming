@@ -1,0 +1,54 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    background: #dbdbdb;
+}
+
+#chat {
+    position: relative;
+    top: 50px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    width: 600px;
+    height: 800px;
+    padding: 20px 30px;
+    border-radius: 10px;
+    margin: 0 auto;
+    overflow-y: auto;
+
+    font-size: 1.2rem;
+    background: #fff;
+}
+
+.hoder.me .content {
+    color: #fff;
+    background: #01be40;
+}
+
+.content {
+    display: inline-block;
+    max-width: 250px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background: #e4e4e9;
+    transition: background-color 0.5s;
+}
+
+.hoder.me {
+    align-self: self-end;
+}
+
+.content:hover {
+    background: #a5a2a2;
+}
+
+.hoder.me .content:hover {
+    background: #018a2f;
+}
