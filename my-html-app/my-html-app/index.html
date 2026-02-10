@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Student Management</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Student Management</h1>
+
+        <div class="row">
+            <div class="col-md-3 mb-2">
+                <form id="frm-student" method="post">
+                    <div class="form-group">
+                        <label for="id">ID:</label>
+                        <input id="id" class="form-control" type="text" name="id" autofocus>
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input id="name" class="form-control" type="text" name="name">
+                    </div>
+                    <div class="form-group">
+                        <label for="gpa">GPA:</label>
+                        <input id="gpa" class="form-control" type="text" name="gpa">
+                    </div>
+                    <button id="btn-add" class="btn btn-success">
+                        <i class="fa fa-plus" aria-hidden="true"></i> Add
+                    </button>
+                    <button id="btn-save" class="btn btn-success">
+                        <i class="fa fa-save" aria-hidden="true"></i> Save changes
+                    </button>
+                </form>
+            </div>
+            <div class="col-md-9">
+                <table class="table table-light table-striped">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>GPA</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+    <!-- <script src="js/site.js"></script> -->
+     <script src="./js/self.js"></script>
+</body>
+
+</html>
